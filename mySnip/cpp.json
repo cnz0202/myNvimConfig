@@ -1,0 +1,29 @@
+{
+	"snip1": {
+		"prefix": "#cpp",
+		"body": [
+			"#include <iostream>",
+			"using namespace std;",
+			"",
+			"int main() {",
+			"\t$0",
+			"\treturn 0;",
+			"}"
+		]
+	},
+	"snip2": {
+		"prefix": "#ecp",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"#define int long long",
+			"#define el <<'\\n'",
+			"using namespace std;",
+			"",
+			"signed main() {",
+			"\tios::sync_with_stdio(0),cin.tie(0);",
+			"\t$0",
+			"\treturn 0;",
+			"}"
+		]
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"snip1": {
+		"prefix": "#c",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"int main() {",
+			"\t$0",
+			"\treturn 0;",
+			"}"
+		]
+	}
+}
