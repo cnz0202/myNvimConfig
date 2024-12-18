@@ -3,42 +3,51 @@ return {
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
-		end
+		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls", "clangd", "pyright", "tsserver", "html", "cssls", "emmet_ls"},
+				ensure_installed = {
+					"lua_ls",
+					"clangd",
+					"pyright",
+					"tsserver",
+					"html",
+					"cssls",
+					"emmet_ls",
+				},
+				automatic_installation = true,
 			})
-		end
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"hrsh7th/cmp-nvim-lsp"
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
 			local lspcf = require("lspconfig")
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local opts = { noremap = true, silent = true }
 			local on_attach = function(client, bufnr)
 				opts.buffer = bufnr
-				vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-				vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-				vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 			end
 			lspcf.lua_ls.setup({
 				on_attach = on_attach,
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspcf.clangd.setup({
 				on_attach = on_attach,
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspcf.pyright.setup({
 				on_attach = on_attach,
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 			lspcf.tsserver.setup({
 				on_attach = on_attach,
@@ -56,9 +65,6 @@ return {
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})
-		end
-	}
-
-
-
+		end,
+	},
 }
