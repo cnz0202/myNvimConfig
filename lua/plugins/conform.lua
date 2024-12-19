@@ -1,7 +1,8 @@
 return {
-	'stevearc/conform.nvim',
+	"stevearc/conform.nvim", --branch = 'nvim-0.9',
+	version = "v7.1.0",
 	opts = {},
-	config = function ()
+	config = function()
 		local conform = require("conform")
 		conform.setup({
 			formatters_by_ft = {
@@ -14,9 +15,9 @@ return {
 				html = { "prettier", stop_after_first = true },
 				css = { "prettier", stop_after_first = true },
 				json = { "prettier", stop_after_first = true },
-				c = { "clang-format" }
+				c = { "clang-format" },
 			},
 		})
-		vim.keymap.set('n', conform.format())
-	end
+		vim.keymap.set("n", "<leader>=", conform.format, {})
+	end,
 }
