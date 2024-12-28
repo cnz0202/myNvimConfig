@@ -9,7 +9,7 @@ return {
 					normal = { bg = "#14161a" },
 				}
 			end,
-			italics = true
+			italics = true,
 		})
-	end
+	end,
 }

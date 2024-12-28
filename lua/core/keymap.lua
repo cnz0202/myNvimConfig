@@ -29,7 +29,3 @@ km.set("n", "<leader>y", ":w !clip.exe<CR><CR>")
 km.set("v", "<leader>y", ":'<,'>w !clip.exe<CR><CR>")
 
 --vim.api.nvim_buf_set_option('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>',{ noremap=true, silent=true })
-
-
-
-

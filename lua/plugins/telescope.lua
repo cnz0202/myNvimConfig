@@ -1,26 +1,27 @@
 return {
 	{
-		'nvim-telescope/telescope.nvim', branch = '0.1.x',
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
 		dependencies = {
-			'nvim-lua/plenary.nvim',
-			"nvim-tree/nvim-web-devicons"
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
 			require("telescope").setup({
 				defaults = {
-					path_display = {"smart"},
+					path_display = { "smart" },
 				},
 				extensions = {
 					["ui-select"] = {
-						require("telescope.themes").get_dropdown { }
-					}
-				}
+						require("telescope.themes").get_dropdown({}),
+					},
+				},
 			})
 			require("telescope").load_extension("ui-select")
 			vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
-		end
+		end,
 	},
 	{
-		'nvim-telescope/telescope-ui-select.nvim',
-	}
+		"nvim-telescope/telescope-ui-select.nvim",
+	},
 }

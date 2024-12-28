@@ -1,11 +1,5 @@
 return {
 	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	},
-	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
@@ -13,7 +7,7 @@ return {
 					"lua_ls",
 					"clangd",
 					"pyright",
-					"tsserver",
+					"ts_ls",
 					"html",
 					"cssls",
 					"emmet_ls",
@@ -49,7 +43,7 @@ return {
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})
-			lspcf.tsserver.setup({
+			lspcf.ts_ls.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})

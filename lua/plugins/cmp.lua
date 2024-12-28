@@ -5,11 +5,10 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
 		},
-		config = function ()
+		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
 			require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./mySnip" } })
-		end
-
+		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -19,12 +18,12 @@ return {
 			"hrsh7th/cmp-buffer",
 		},
 		config = function()
-			local cmp = require'cmp'
-			local ls = require'luasnip'
+			local cmp = require("cmp")
+			local ls = require("luasnip")
 			cmp.setup({
 				snippet = {
 					expand = function(args)
-						require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 					end,
 				},
 				window = {
@@ -65,12 +64,11 @@ return {
 					end, { "i", "s" }),
 				},
 				sources = cmp.config.sources({
-					{ name = 'nvim_lsp' },
-					{ name = 'luasnip' },
-				},
-					{
-						{ name = 'buffer' },
-					})
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
+				}, {
+					{ name = "buffer" },
+				}),
 			})
 
 			-- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
@@ -82,25 +80,26 @@ return {
 					{ name = 'buffer' },
 				})
 			})
-			require("cmp_git").setup() ]]--
+			require("cmp_git").setup() ]]
+			--
 
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-			cmp.setup.cmdline({ '/', '?' }, {
+			cmp.setup.cmdline({ "/", "?" }, {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = {
-					{ name = 'buffer' }
-				}
+					{ name = "buffer" },
+				},
 			})
 
 			-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-			cmp.setup.cmdline(':', {
+			cmp.setup.cmdline(":", {
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
-					{ name = 'path' }
+					{ name = "path" },
 				}, {
-					{ name = 'cmdline' }
+					{ name = "cmdline" },
 				}),
-				matching = { disallow_symbol_nonprefix_matching = false }
+				matching = { disallow_symbol_nonprefix_matching = false },
 			})
 
 			-- Set up lspconfig.
@@ -109,6 +108,6 @@ return {
 			--require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
 			--	capabilities = capabilities
 			--}
-		end
-	}
+		end,
+	},
 }
