@@ -1,0 +1,6 @@
+[x] oil
+[ ] harpoon
+[x] navic
+[x] rainbow parenthesis
+[ ] vim visual multi
+[ ] vim fugitve

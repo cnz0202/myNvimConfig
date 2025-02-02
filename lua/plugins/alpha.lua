@@ -31,7 +31,7 @@ return {
 			button_hl("i", "  > New file", ":ene <BAR> startinsert <CR>"),
 			button_hl("f", "󰍉  > Find file", ":Telescope find_files<CR>"),
 			button_hl("r", "  > Recent", ":Telescope oldfiles<CR>"),
-			button_hl("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
+			button_hl("s", "  > Settings", ":e $MYVIMRC | :Oil --float %:p:h | pwd<CR>"),
 			button_hl("q", "󰅙  > Quit NVIM", ":qa<CR>"),
 		}
 
