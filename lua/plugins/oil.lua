@@ -10,9 +10,13 @@ return {
 	lazy = false,
 	config = function()
 		require("oil").setup({
+			skip_confirm_for_simple_edits = true,
+			view_options = {
+				show_hidden = true,
+			},
 			float = {
 				padding = 6,
-			}
+			},
 		})
 		vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 	end,

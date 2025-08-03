@@ -16,4 +16,8 @@ opt.incsearch = true
 
 opt.scrolloff = 8
 
+opt.signcolumn = "number"
+
+opt.mousescroll = "ver:1"
+
 opt.fillchars = "eob: "

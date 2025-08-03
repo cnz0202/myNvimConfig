@@ -20,6 +20,7 @@
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "mini.icons": { "branch": "main", "commit": "ec61af6e606fc89ee3b1d8f2f20166a3ca917a36" },
   "nvim-autopairs": { "branch": "master", "commit": "b464658e9b880f463b9f7e6ccddd93fb0013f559" },
+  "nvim-bqf": { "branch": "main", "commit": "ebb6d2689e4427452180f17c53f29f7e460236f1" },
   "nvim-cmp": { "branch": "main", "commit": "b555203ce4bd7ff6192e759af3362f9d217e8c89" },
   "nvim-lspconfig": { "branch": "master", "commit": "ff2b85abaa810f6611233dbe6d31c07510ebf43d" },
   "nvim-navic": { "branch": "master", "commit": "8649f694d3e76ee10c19255dece6411c29206a54" },
@@ -33,8 +34,8 @@
   "tabout.nvim": { "branch": "master", "commit": "9a3499480a8e53dcaa665e2836f287e3b7764009" },
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "tmux.nvim": { "branch": "main", "commit": "2c1c3be0ef287073cef963f2aefa31a15c8b9cd8" },
   "treesj": { "branch": "main", "commit": "94f6df623f2d15630b1b617abff39962024cb501" },
   "vim-test": { "branch": "master", "commit": "5de3bfff03a36d88608d94dba69266f3a48238f2" },
-  "vim-tmux-navigator": { "branch": "master", "commit": "d847ea942a5bb4d4fab6efebc9f30d787fd96e65" },
   "vimux": { "branch": "master", "commit": "7db6b2f79d432ee3820668b1d4625311dbe1d0ad" }
 }

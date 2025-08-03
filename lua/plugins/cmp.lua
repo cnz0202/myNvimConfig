@@ -21,6 +21,11 @@ return {
 			local cmp = require("cmp")
 			local ls = require("luasnip")
 			cmp.setup({
+				performance = {
+					-- max_view_entries = 5,
+					-- fetching_timeout = 1,
+					throttle = 0,
+				},
 				snippet = {
 					expand = function(args)
 						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
@@ -93,6 +98,10 @@ return {
 
 			-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 			cmp.setup.cmdline(":", {
+				-- performance = {
+				-- 	max_view_entries = 10,
+				-- 	fetching_timeout = 1,
+				-- },
 				mapping = cmp.mapping.preset.cmdline(),
 				sources = cmp.config.sources({
 					{ name = "path" },

@@ -22,8 +22,9 @@ return {
 
 						navic_opts = {
 							highlight = true,
-							separator = "  "
+							separator = "  ",
 						}, -- lua table with same format as setup's option. All options except "lsp" options take effect when set here.
+						padding = { left = 1, right = 0 },
 					},
 				},
 				lualine_x = { 'filetype' }
