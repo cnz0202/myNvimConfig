@@ -30,5 +30,7 @@ return {
 				lualine_x = { 'filetype' }
 			},
 		})
+		vim.api.nvim_set_hl(0, "StatusLine", {reverse = false})
+		vim.api.nvim_set_hl(0, "StatusLineNC", {reverse = false})
 	end,
 }
