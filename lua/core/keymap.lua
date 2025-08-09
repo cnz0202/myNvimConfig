@@ -2,11 +2,11 @@ vim.g.mapleader = " "
 
 local km = vim.keymap
 
-km.set("n", "<tab>", "<cmd>bnext<CR>")
-km.set("n", "<S-tab>", "<cmd>bprev<CR>")
+-- km.set("n", "<tab>", "<cmd>bnext<CR>")
+-- km.set("n", "<S-tab>", "<cmd>bprev<CR>")
 
-km.set("n", "<leader>|", "<C-w>v")
-km.set("n", "<leader>-", "<C-w>s")
+-- km.set("n", "<leader>|", "<C-w>v")
+-- km.set("n", "<leader>-", "<C-w>s")
 
 km.set("n", "<leader>q", ":bd!<CR>")
 km.set("n", "<leader>w", ":w<CR>")
@@ -31,9 +31,9 @@ km.set("t", "<leader><ESC>", "<C-\\><C-n>")
 km.set("n", "*", ":set hls<CR>*")
 km.set("n", "<leader>*", ":nohls<CR>")
 
-km.set("n", "]q", ":cnext<CR>")
-km.set("n", "[q", ":cprev<CR>")
-km.set("n", "<S-d>", "<C-w>d")
+-- km.set("n", "]q", ":cnext<CR>")
+-- km.set("n", "[q", ":cprev<CR>")
+-- km.set("n", "<S-d>", "<C-w>d")
 
 vim.cmd([[ au FileType help :wincmd L ]])
 vim.cmd([[ au TermOpen * setlocal nonu nornu ]])
