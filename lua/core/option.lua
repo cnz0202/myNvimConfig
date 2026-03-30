@@ -21,3 +21,21 @@ opt.signcolumn = "number"
 opt.mousescroll = "ver:1"
 
 opt.fillchars = "eob: "
+
+vim.g.clipboard = {
+	name = "WslClipboard",
+	copy = {
+		["+"] = "clip.exe",
+		["*"] = "clip.exe",
+	},
+	paste = {
+		["+"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+		["*"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+	},
+	cache_enabled = 0,
+}
+
+vim.api.nvim_create_user_command('Settings', function (input)
+	vim.api.nvim_command(":e $MYVIMRC | cd %:p:h | Telescope find_files")
+end, {nargs='*'})
+

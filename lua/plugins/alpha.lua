@@ -18,13 +18,13 @@ return {
 			"                                                     ",
 		}
 
-		dashboard.section.header.opts.hl = "Identifier"
+		dashboard.section.header.opts.hl = "GruvboxGreen"
 		-- Set menu
 
 		local function button_hl(sc, txt, keybind, keybind_opts)
 			local b = dashboard.button(sc, txt, keybind, keybind_opts)
-			b.opts.hl = "String"
-			b.opts.hl_shortcut = "Constant"
+			b.opts.hl = "GruvboxBlue"
+			b.opts.hl_shortcut = "GruvboxOrange"
 			return b
 		end
 		dashboard.section.buttons.val = {
