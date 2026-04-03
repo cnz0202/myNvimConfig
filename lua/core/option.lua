@@ -22,6 +22,8 @@ opt.mousescroll = "ver:1"
 
 opt.fillchars = "eob: "
 
+opt.confirm = true
+
 vim.g.clipboard = {
 	name = "WslClipboard",
 	copy = {
@@ -35,7 +37,14 @@ vim.g.clipboard = {
 	cache_enabled = 0,
 }
 
+vim.cmd([[ au FileType help :wincmd L ]])
+vim.cmd([[ au TermOpen * setlocal nonu nornu ]])
+
 vim.api.nvim_create_user_command('Settings', function (input)
 	vim.api.nvim_command(":e $MYVIMRC | cd %:p:h | Telescope find_files")
-end, {nargs='*'})
+end, { nargs='*' })
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function() vim.hl.on_yank({ higroup='Visual' }) end
+})
 

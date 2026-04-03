@@ -35,8 +35,6 @@ map("n", "<leader>*", ":nohls<CR>")
 -- map("n", "[q", ":cprev<CR>")
 -- map("n", "<S-d>", "<C-w>d")
 
-vim.cmd([[ au FileType help :wincmd L ]])
-vim.cmd([[ au TermOpen * setlocal nonu nornu ]])
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function (ev)

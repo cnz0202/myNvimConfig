@@ -4,7 +4,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- Default options:
+			local palette = require("gruvbox").palette
 			require("gruvbox").setup({
 				terminal_colors = true, -- add neovim terminal colors
 				undercurl = true,
@@ -25,11 +25,15 @@ return {
 				inverse = true, -- invert background for search, diffs, statuslines and errors
 				contrast = "hard", -- can be "hard", "soft" or empty string
 				palette_overrides = {},
-				overrides = {},
+				overrides = {
+					NormalFloat = { bg = palette.dark2 },
+					Folded = { bg = palette.dark0 }
+				},
 				dim_inactive = false,
 				transparent_mode = false,
 			})
 			vim.cmd.colorscheme("gruvbox")
+			vim.api.nvim_set_hl(0, "FloatBorder", { link = "GruvboxFg1" })
 		end,
 		opts = ...,
 	},

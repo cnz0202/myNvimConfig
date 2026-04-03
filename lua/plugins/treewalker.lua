@@ -31,10 +31,10 @@ return {
 	},
 	config = function()
 		-- movement
-		vim.keymap.set({ "n", "v" }, "[n", "<cmd>Treewalker Up<cr>", { silent = true })
-		vim.keymap.set({ "n", "v" }, "]n", "<cmd>Treewalker Down<cr>", { silent = true })
-		vim.keymap.set({ "n", "v" }, "[N", "<cmd>Treewalker Left<cr>", { silent = true })
-		vim.keymap.set({ "n", "v" }, "]N", "<cmd>Treewalker Right<cr>", { silent = true })
+		vim.keymap.set({ "n" }, "[n", "<cmd>Treewalker Up<cr>", { silent = true })
+		vim.keymap.set({ "n" }, "]n", "<cmd>Treewalker Down<cr>", { silent = true })
+		vim.keymap.set({ "n" }, "[N", "<cmd>Treewalker Left<cr>", { silent = true })
+		vim.keymap.set({ "n" }, "]N", "<cmd>Treewalker Right<cr>", { silent = true })
 
 		-- swapping
 		vim.keymap.set("n", "<C-S-k>", "<cmd>Treewalker SwapUp<cr>", { silent = true })

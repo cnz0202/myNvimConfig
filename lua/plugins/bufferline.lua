@@ -16,9 +16,14 @@ return {
 	},
 	config = function()
 		local bufferline = require("bufferline")
-		vim.api.nvim_set_hl(0, "TabLineSel", { bg = "#83a598" })
+		local palette = require("gruvbox").palette
+		vim.api.nvim_set_hl(0, "TabLineSel", { bg = palette.bright_blue })
 		bufferline.setup({
 			options = {
+				numbers = function (opts)
+					return string.format('[%s]', opts.id)
+				end,
+				show_buffer_icons = false,
 				indicator = {
 					style = "underline",
 				},

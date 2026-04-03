@@ -5,7 +5,7 @@ return {
 	init = function()
 		-- VimTeX configuration goes here, e.g.
 		vim.g.vimtex_view_method = "sioyek"
-		vim.g.vimtex_view_sioyek_exe = "/usr/bin/sioyek"
+		vim.g.vimtex_view_sioyek_exe = "/usr/local/bin/sioyek"
 		vim.g.vimtex_callback_progpath = "wsl nvim"
 
 		vim.api.nvim_create_autocmd({ "BufReadPre" }, {
