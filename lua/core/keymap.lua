@@ -39,7 +39,7 @@ vim.cmd([[ au FileType help :wincmd L ]])
 vim.cmd([[ au TermOpen * setlocal nonu nornu ]])
 
 vim.api.nvim_create_autocmd('LspAttach', {
-	callback = function (ev)
-		map("n", "gD", vim.lsp.buf.definition);
-	end
+  callback = function (ev)
+    map("n", "gD", vim.lsp.buf.definition);
+  end
 })

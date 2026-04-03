@@ -1,0 +1,6 @@
+require("plugin.explorers")
+require("plugin.colorscheme")
+require("plugin.editorutil")
+require("plugin.lspconfig")
+require("plugin.completion")
+require("plugin.workspace")
