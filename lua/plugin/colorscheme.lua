@@ -19,6 +19,8 @@ require("gruvbox").setup({
 vim.cmd.colorscheme("gruvbox")
 vim.api.nvim_set_hl(0, "FloatBorder", { link = "GruvboxFg1" })
 
+--[[
+vim.pack.add({"https://github.com/goolord/alpha-nvim"})
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
@@ -61,7 +63,9 @@ dashboard.section.footer.opts.hl = "Comment"
 alpha.setup(dashboard.opts)
 
 -- Disable folding on alpha buffer
-vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ]])
+-- vim.cmd([[ autocmd FileType alpha setlocal nofoldenable ] ])
+
+--]]
 
 local bufferline = require("bufferline")
 vim.api.nvim_set_hl(0, "TabLineSel", { bg = palette.bright_blue })

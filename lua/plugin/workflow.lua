@@ -1,11 +1,15 @@
 vim.pack.add({
   "https://github.com/lervag/vimtex",
-	"https://github.com/kdheepak/lazygit.nvim",
+  "https://github.com/kdheepak/lazygit.nvim",
+  "https://github.com/kevinhwang91/nvim-bqf",
 })
 
 vim.g.vimtex_view_method = "sioyek"
 vim.g.vimtex_view_sioyek_exe = "/usr/local/bin/sioyek"
 vim.g.vimtex_callback_progpath = "wsl nvim"
+vim.g.vimtex_compiler_latexmk_engines = {
+  ['_'] = '-xelatex',
+}
 vim.api.nvim_create_autocmd({ "BufReadPre" }, {
   pattern = "*.tex",
   callback = function(opts)

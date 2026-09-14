@@ -44,3 +44,6 @@ vim.o.foldenable = true
 require("ufo").setup({})
 map("n", "zR", require("ufo").openAllFolds)
 map("n", "zM", require("ufo").closeAllFolds)
+
+vim.cmd("packadd nvim.undotree")
+map("n", "<leader>u", require("undotree").open)

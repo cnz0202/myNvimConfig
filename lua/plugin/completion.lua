@@ -1,16 +1,22 @@
 vim.pack.add({
-  "https://github.com/rafamadriz/friendly-snippets",
   { src = "https://github.com/L3MON4D3/LuaSnip", version = vim.version.range("2") },
+  "https://github.com/rafamadriz/friendly-snippets",
   "https://github.com/hrsh7th/cmp-path",
   "https://github.com/hrsh7th/cmp-cmdline",
   "https://github.com/hrsh7th/cmp-buffer",
   "https://github.com/hrsh7th/nvim-cmp",
+  "https://github.com/saadparwaiz1/cmp_luasnip",
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
 
 local cmp = require("cmp")
 cmp.setup({
+  completion = {
+    completeopt = 'menu,menuone,noinsert,noselect',
+  },
+  preselect = cmp.PreselectMode.None,
   performance = {
     throttle = 0,
   },

@@ -39,6 +39,7 @@ require("nvim-treesitter").install({
   "vimdoc",
   "query",
   "python",
+  "html",
   "javascript",
   "rust",
 })
@@ -46,7 +47,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   callback = function()
     pcall(vim.treesitter.start)
   end,
-  once = true,
+  -- once = true,
 })
 
 require("mason-tool-installer").setup({
