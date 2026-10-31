@@ -5,11 +5,10 @@
 			"#include <bits/stdc++.h>",
 			"#define int long long",
 			"#define ioacc ios::sync_with_stdio(0),cin.tie(0);",
-			"#define el <<'\\n'",
 			"using namespace std;",
 			"",
 			"signed main() {",
-			"\tioacc",
+			"\tioacc;",
 			"\t$0",
 			"\treturn 0;",
 			"}"

@@ -10,7 +10,7 @@ vim.g.vimtex_callback_progpath = "wsl nvim"
 vim.g.vimtex_compiler_latexmk_engines = {
   ['_'] = '-xelatex',
 }
-vim.api.nvim_create_autocmd({ "BufReadPre" }, {
+vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
   pattern = "*.tex",
   callback = function(opts)
     vim.b.vimtex_main = vim.fn.expand("%:p")
@@ -18,3 +18,9 @@ vim.api.nvim_create_autocmd({ "BufReadPre" }, {
 })
 
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+
+-- temporary fix for :diffget not working in nvimdiff
+-- https://github.com/neovim/neovim/issues/22696
+if vim.opt.diff:get() then
+  vim.opt.diffopt:remove("linematch:40")
+end
