@@ -38,8 +38,17 @@ map("n", "<leader>*", ":nohls<CR>")
 vim.cmd([[ au FileType help :wincmd L ]])
 vim.cmd([[ au TermOpen * setlocal nonu nornu ]])
 
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function (ev)
-    map("n", "gD", vim.lsp.buf.definition);
-  end
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    map("n", "gD", vim.lsp.buf.definition)
+  end,
 })
+
+-- relative folding
+map("n", "<leader>z", function()
+  vim.wo.foldlevel = vim.fn.foldlevel(".") + vim.v.count
+end)
+
+map("n", "<leader>Z", function()
+  vim.wo.foldlevel = vim.fn.foldlevel(".") - vim.v.count1
+end)

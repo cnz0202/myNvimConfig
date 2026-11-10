@@ -10,12 +10,19 @@ vim.g.vimtex_callback_progpath = "wsl nvim"
 vim.g.vimtex_compiler_latexmk_engines = {
   ['_'] = '-xelatex',
 }
+vim.g.vimtex_compiler_latexmk = {
+  options = {
+    '-shell-escape',
+  }
+}
+
 vim.api.nvim_create_autocmd({ "BufReadPre", "BufNewFile" }, {
   pattern = "*.tex",
   callback = function(opts)
     vim.b.vimtex_main = vim.fn.expand("%:p")
   end,
 })
+vim.g.vimtex_quickfix_open_on_warning = 0
 
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
 
